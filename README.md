@@ -24,3 +24,9 @@ My repository of codes for MCU ESP8266, using the framework PlatformIO.
 ## Pesquisando uma biblioteca
 
 >> $ platformio lib search "nome da biblioteca"
+
+## Usando a serial 
+
+>> $ platformio device monitor [options]
+
+http://docs.platformio.org/en/latest/userguide/cmd_device.html#cmdoption-platformio-serialports-monitor-f
