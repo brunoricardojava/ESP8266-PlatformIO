@@ -7,7 +7,7 @@ My repository of codes for MCU ESP8266, using the framework PlatformIO.
 
 ## Criando um projeto
 
->> $ platformio init --board nodemcuv2 --board esp01
+>> $ platformio init --board nodemcuv2
 
 ## Compilando o projeto
 
@@ -15,4 +15,12 @@ My repository of codes for MCU ESP8266, using the framework PlatformIO.
 
 ## Upload do código
 
->> platformio run --target upload
+>> $ platformio run --target upload
+
+## Instalando uma biblioteca
+
+>> $ platformio lib install "numero da biblioteca"
+
+## Pesquisando uma biblioteca
+
+>> $ platformio lib search "nome da biblioteca"
