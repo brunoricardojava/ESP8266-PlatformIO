@@ -3,14 +3,25 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
-const char* ssid = "ssid";
-const char* password = "password";
+const char* ssid = "SSID";
+const char* password = "PASS-WORD";
+
+
+
+// NETWORK: Static IP details...
+/*
+IPAddress ip(200, 239, 93, 102); 
+IPAddress gateway(200, 239, 93, 254);
+IPAddress subnet(255, 255, 255, 0);
+*/
 
 void setup() {
 
   Serial.begin(115200);
   Serial.println("Booting");
   WiFi.mode(WIFI_STA);
+  Serial.println(ssid);
+  //WiFi.config(ip, gateway, subnet);
   WiFi.begin(ssid, password);
   while (WiFi.waitForConnectResult() != WL_CONNECTED) {
     Serial.println("Connection Failed! Rebooting...");
@@ -18,10 +29,9 @@ void setup() {
     ESP.restart();
   }
 
-
   ArduinoOTA.setHostname("espota");
   
-  // ArduinoOTA.setHostname("espota");
+  ArduinoOTA.setHostname("espota");
   // No authentication by default
   // ArduinoOTA.setPassword("admin");
 
@@ -57,4 +67,5 @@ void setup() {
 
 void loop() {
   ArduinoOTA.handle();
+  Serial.println("Update!!!");
 }
