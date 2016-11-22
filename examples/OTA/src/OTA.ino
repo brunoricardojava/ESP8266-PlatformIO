@@ -29,7 +29,6 @@ void setup() {
     ESP.restart();
   }
 
-  ArduinoOTA.setHostname("espota");
   
   ArduinoOTA.setHostname("espota");
   // No authentication by default
