@@ -29,4 +29,10 @@ My repository of codes for MCU ESP8266, using the framework PlatformIO.
 
 >> $ platformio device monitor [options]
 
+## Usando o sistema de arquivos SPIFFS
+
+OBS: Criar um a pasta de nome "data" no mesmo nivel da pasta "src"
+
+>> $ platformio run -t uploadfs
+
 http://docs.platformio.org/en/latest/userguide/cmd_device.html#cmdoption-platformio-serialports-monitor-f
